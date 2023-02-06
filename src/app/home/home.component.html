@@ -1,0 +1,17 @@
+<div class="home">
+   <h1 class="titulo">GOURMET</h1>
+   <br>
+   <h2 style="color: white;"><b>MIS RECETARIOS</b></h2>
+   <div class="grid-recetarios">
+    <div class="grid-item" *ngFor="let recetario of recetarios">
+        <div class="card">
+            <img src="assets/images/recetario.jpg" style="width:100%; object-fit: cover;">
+            <div class="container">
+              <h4><b>{{recetario.name}}</b></h4>
+              <p>Numero de recetas: {{getCountOfRecetas(recetario.recetas)}}</p>
+              <a class="btn" [routerLink]="['recetas',recetario.id]">Ver recetas</a>
+            </div>
+          </div>
+    </div>
+   </div>
+</div>

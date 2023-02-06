@@ -1,0 +1,19 @@
+.recetas{
+    background-color: black;
+}
+.card {
+    max-width: 400px;
+    max-height: 800px;
+    background-color: white;
+}
+
+.example-header-image {
+    background-image: url('https://nhnatural.co/wp-content/uploads/2020/06/logo-recetas-01-1.png');
+    background-size: cover;
+}
+h1{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 20px;
+    font-size: 50px;
+}

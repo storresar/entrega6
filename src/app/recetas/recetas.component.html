@@ -1,0 +1,25 @@
+<div class="recetas">
+    <h1 style="text-align: center;color: white;">RECETAS</h1>
+    <mat-grid-list [cols]="mybreakpoint" rowHeight="1:1.5" (window:resize)="handleSize($event)">
+        <mat-grid-tile *ngFor="let receta of recetas">
+            <mat-card class="card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>{{receta.nombre}}</mat-card-title>
+                  <mat-card-subtitle style="color:black;">Calorias: {{receta.caloriasReceta}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="https://factoryfy.es/wp-content/uploads/dise%C3%B1o-logo-blog-cocina.jpg" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                 <h4>Ingredientes:</h4>
+                 <mat-list>
+                    <mat-list-item *ngFor="let alimento of receta.alimentos" style="color: darkgray;">
+                      <h5 style="color: darkgray;">{{ alimento.ingrediente.nombre }} </h5>
+                      <span *ngIf="alimento.unidad.nombre == 'MEDIDALIBRE'" style="color: darkgray;">{{alimento.cantidad}} {{alimento.ingrediente.unidad.nombre}}</span>
+                      <span *ngIf="alimento.unidad.nombre == 'CN'" style="color: darkgray;">C/N</span>
+                    </mat-list-item>
+                 </mat-list>
+                </mat-card-content>
+              </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
