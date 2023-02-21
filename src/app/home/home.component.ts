@@ -27,9 +27,4 @@ export class HomeComponent {
   getCountOfRecetas(recetas:any){
     return recetas.length
   }
-  goTo(recetario_id:any){
-
-  }
-
-
 }
